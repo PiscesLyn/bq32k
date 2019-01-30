@@ -53,8 +53,8 @@ RT-Thread online packages
 
 bq32k 软件包的使用流程一般如下：
 
-1. 初始化 bq32k 设备 `bq32k_init`
-2. 进行 RT_Thread device接口进行RTC读写 的操作
+1. 初始化 bq32k 设备 `bq32k_register`
+2. 使用 RT_Thread device接口进行bq32k和soft rtc同步 的操作
 
 详细的使用方法可以参考[bq32k 示例程序](bq32k_sample.c) 。
 
