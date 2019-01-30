@@ -5,15 +5,13 @@
  *
  * Change Logs:
  * Date           Author       Notes
- * 2019-01-25     ZhouLin   first version
+ * 2019-01-25     PiscesLyn   first version
  */
 
 #include <rtthread.h>
 #include <rtdevice.h>
-#include <board.h>
 
-
-#if defined(BSP_USING_RTC_BQ32K)
+#if defined(PKG_USING_BQ32K)
 #define BQ32K_NAME  "bq32k"
 
 time_t bq32k_sync_to_rtc(void)
