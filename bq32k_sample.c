@@ -10,9 +10,26 @@
 
 #include <rtthread.h>
 #include <rtdevice.h>
+#include "bq32k.h"
 
 #if defined(PKG_USING_BQ32K)
-#define BQ32K_NAME  "bq32k"
+#define BQ32K_NAME      "bq32k"
+#define BQ32K_I2C_BUS   "i2c3"
+
+int rt_hw_bq32k_init(void)
+{
+    rt_err_t result;
+    result = bq32k_register(BQ32K_NAME, BQ32K_I2C_BUS);
+    if (result != RT_EOK)
+    {
+        rt_kprintf("bq32k register err code: %d\n", result);
+        return result;
+    }
+    rt_kprintf("bq32k init success\n");
+    return RT_EOK;
+}
+INIT_DEVICE_EXPORT(rt_hw_bq32k_init);
+
 
 time_t bq32k_sync_to_rtc(void)
 {
