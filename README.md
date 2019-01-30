@@ -60,7 +60,7 @@ bq32k 软件包的使用流程一般如下：
 
 ## MSH 测试命令
 
-如果开启了 bq32k 软件包的示例程序，就会导出 `bq32k_sync` 命令到控制台。调用之后默认会在 `i2c3`总线上探测地址为 `0x68` 的 BQ32K 设备。运行结果如下：
+如果开启了 bq32k 软件包的示例程序，就会导出 `bq32k_sync` 命令到控制台，并默认会在 `i2c3`总线注册 BQ32K 设备。运行结果如下：
 
 ```
 msh >bq32k_sync to
@@ -74,4 +74,4 @@ msh >bq32k_sync from
 ## 联系方式
 
 - 维护：[PiscesLyn](https://github.com/PiscesLyn)
-- 主页：<https://github.com/PiscesLyn/bq32k >
+- 主页：<https://github.com/PiscesLyn/bq32k>
